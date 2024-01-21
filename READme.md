@@ -1,4 +1,4 @@
-# TRON-Ruby
+# TronHttp Ruby
 
 Simple Ruby interface for the TRON Network HTTP API.
 
