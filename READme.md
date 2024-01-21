@@ -22,7 +22,7 @@ Run the start script.
 $ ruby start.rb
 ```
 
-All endpoint declarations are defined in `data/tron.yml` and get defined when `start.rb` is loaded using the `TronHTTP::Setup.run` method.
+All endpoint declarations are defined in `data/tron.yml` and get defined when `start.rb` is loaded using the `TronHTTP::Config.run` method.
 
 Client instances are created automatically for Mainnet, Shashta, Tronex, and Nile.
 
@@ -67,14 +67,14 @@ endpoints:
   # https://developers.tron.network/reference/gettransactioninfobyid-1
   get_transaction_info_by_id:
     path: /walletsolidity/gettransactioninfobyid
-    method: POST
+    method: post
     variables:
       value: string!
   #
   # https://developers.tron.network/reference/gettransactioninfobyblocknum-1
   get_transaction_by_block_num:
     path: /walletsolidity/gettransactioninfobyblocknum
-    method: POST
+    method: post
     variables:
       value: int32
   #
