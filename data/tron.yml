@@ -19,28 +19,28 @@ endpoints:
   # https://developers.tron.network/reference/gettransactionbyid
   get_transaction_by_id:
     path: /wallet/gettransactionbyid
-    method: POST
+    method: post
     variables:
       value: string!
   #
   # https://developers.tron.network/reference/gettransactioninfobyid-1
   get_transaction_info_by_id:
     path: /walletsolidity/gettransactioninfobyid
-    method: POST
+    method: post
     variables:
       value: string!
   #
   # https://developers.tron.network/reference/gettransactioninfobyblocknum-1
   get_transaction_by_block_num:
     path: /walletsolidity/gettransactioninfobyblocknum
-    method: POST
+    method: post
     variables:
       value: int32
   #
   # https://developers.tron.network/reference/gettransactioncountbyblocknum
   get_transaction_count_by_block_num:
     path: /walletsolidity/gettransactioncountbyblocknum
-    method: POST
+    method: post
     variables:
       value: int32
   #
@@ -49,7 +49,7 @@ endpoints:
   # https://developers.tron.network/reference/getblock-2
   get_block:
     path: /walletsolidity/getblock
-    method: POST
+    method: post
     variables:
       id_or_num: string
       detail: boolean
@@ -57,33 +57,33 @@ endpoints:
   # https://developers.tron.network/reference/getnowblock
   get_now_block:
     path: /walletsolidity/getnowblock
-    method: GET
+    method: get
   #
   # https://developers.tron.network/reference/getblockbynum
   get_block_by_num:
     path: /walletsolidity/getblockbynum
-    method: POST
+    method: post
     variables:
       num: int32
   #
   # https://developers.tron.network/reference/getblockbyid-1
   get_block_by_id:
     path: /walletsolidity/getblockbyid
-    method: POST
+    method: post
     variables:
       value: string
   #
   # https://developers.tron.network/reference/getblockbylatestnum
   get_block_by_latest_num:
     path: /walletsolidity/getblockbylatestnum
-    method: POST
+    method: post
     variables:
       num: int32!
   #
   # https://developers.tron.network/reference/getblockbylimitnext-1
   get_block_by_limit_next:
     path: /walletsolidity/getblockbylimitnext
-    method: POST
+    method: post
     variables:
       startNum: int32
       endNum: int32
@@ -93,7 +93,7 @@ endpoints:
   # https://developers.tron.network/reference/walletsolidity-getaccount
   get_account:
     path: /walletsolidity/getaccount
-    method: POST
+    method: post
     variables:
       address: string!
       visible: boolean
@@ -101,7 +101,7 @@ endpoints:
   # https://developers.tron.network/reference/getdelegatedresource-1
   get_delegated_resource:
     path: /walletsolidity/getdelegatedresour
-    method: POST
+    method: post
     variables:
       fromAddress: string!
       toAddress: string!
@@ -110,7 +110,7 @@ endpoints:
   # https://developers.tron.network/reference/getdelegatedresourceaccountindex-1
   get_delegated_resource_account_index:
     path: /walletsolidity/getdelegatedresourceaccountindex
-    method: POST
+    method: post
     variables:
       value: string
       visible: boolean
@@ -118,7 +118,7 @@ endpoints:
   # https://developers.tron.network/reference/getcandelegatedmaxsize-2
   get_can_delegated_max_size:
     path: /walletsolidity/getcandelegatedmaxsize
-    method: POST
+    method: post
     variables:
       owner_address: string!
       type: int32!
@@ -127,7 +127,7 @@ endpoints:
   # https://developers.tron.network/reference/getcanwithdrawunfreezeamount-2
   get_can_withdraw_unfreeze_amount:
     path: /walletsolidity/getcanwithdrawunfreezeamount
-    method: POST
+    method: post
     variables:
       owner_address: string
       timestamp: int64
@@ -136,7 +136,7 @@ endpoints:
   # https://developers.tron.network/reference/getdelegatedresourceaccountindexv2-2
   get_delegated_resource_account_index_v2:
     path: /walletsolidity/getdelegatedresourceaccountindexv2
-    method: POST
+    method: post
     variables:
       value: string
       visible: boolean
@@ -144,7 +144,7 @@ endpoints:
   # https://developers.tron.network/reference/getavailableunfreezecount-2
   get_available_unfreeze_count:
     path: /walletsolidity/getavailableunfreezecount
-    method: POST
+    method: post
     variables:
       owner_address: string
       visible: boolean
@@ -154,19 +154,19 @@ endpoints:
   # https://developers.tron.network/reference/getnodeinfo-1
   get_node_info:
     path: /walletsolidity/getnodeinfo
-    method: GET
+    method: get
   #
   # https://developers.tron.network/reference/getburntrx-1
   get_burn_trx:
     path: /walletsolidity/getburntrx
-    method: GET
+    method: get
   #
   # SMART CONTRACTS
   #
   # https://developers.tron.network/reference/triggerconstantcontract-1
   trigger_constant_contract:
     path: /walletsolidity/triggerconstantcontract
-    method: POST
+    method: post
     variables:
       owner_address: string
       contract_address: string
@@ -177,7 +177,7 @@ endpoints:
   # https://developers.tron.network/reference/estimateenergy-2
   estimate_energy:
     path: /walletsolidity/estimateenergy
-    method: POST
+    method: post
     variables:
       owner_address: string
       contract_address: string
@@ -190,14 +190,14 @@ endpoints:
   # https://developers.tron.network/reference/getassetissuebyname
   get_asset_issue_by_name:
     path: /walletsolidity/getassetissuebyname
-    method: POST
+    method: post
     variables:
       value: string
   #
   # https://developers.tron.network/reference/getassetissuebyid-1
   get_asset_issue_by_id:
     path: /walletsolidity/getassetissuebyid
-    method: POST
+    method: post
     variables:
       value: int32
       visible: boolean
@@ -205,19 +205,19 @@ endpoints:
   # https://developers.tron.network/reference/getassetissuelist-1
   get_asset_issue_list:
     path: /walletsolidity/getassetissuelist
-    method: GET
+    method: get
   #
   # https://developers.tron.network/reference/getassetissuelistbyname
   get_asset_issue_list_by_name:
     path: /walletsolidity/getassetissuelistbyname
-    method: POST
+    method: post
     variables:
       value: string
   #
   # https://developers.tron.network/reference/getpaginatedassetissuelist-1
   get_paginated_asset_issue_list:
     path: /walletsolidity/getpaginatedassetissuelist
-    method: POST
+    method: post
     variables:
       offset: int32
       limit: int32
@@ -227,14 +227,14 @@ endpoints:
   # https://developers.tron.network/reference/listexchanges-1
   list_exchanges:
     path: /walletsolidity/listexchanges
-    method: GET
+    method: get
     variables:
       visible: boolean
   #
   # https://developers.tron.network/reference/getexchangebyid-1
   get_exchange_by_id:
     path: /walletsolidity/getexchangebyid
-    method: POST
+    method: post
     variables:
       id: int32
   #
@@ -243,12 +243,12 @@ endpoints:
   # https://developers.tron.network/reference/listwitnesses-1
   list_witnesses:
     path: /walletsolidity/listwitnesses
-    method: GET
+    method: get
   #
   # https://developers.tron.network/reference/getreward-1
   get_reward:
     path: /walletsolidity/getReward
-    method: POST
+    method: post
     variables:
       address: string
       visible: boolean
@@ -256,7 +256,7 @@ endpoints:
   # https://developers.tron.network/reference/getbrokerage-1
   get_brokerage:
     path: /walletsolidity/getBrokerage
-    method: POST
+    method: post
     variables:
       address: string
       visible: boolean
@@ -266,7 +266,7 @@ endpoints:
   # https://developers.tron.network/reference/scanshieldedtrc20notesbyivk-1
   scan_shielded_trc20_notes_by_ivk:
     path: /walletsolidity/scanshieldedtrc20notesbyivk
-    method: POST
+    method: post
     variables:
       start_block_index: int32!
       end_block_index: int32!
@@ -279,7 +279,7 @@ endpoints:
   # https://developers.tron.network/reference/scanshieldedtrc20notesbyovk-1
   scan_shielded_trc20_notes_by_ovk:
     path: /walletsolidity/scanshieldedtrc20notesbyovk
-    method: POST
+    method: post
     variables:
       start_block_index: int32!
       end_block_index: int32!
@@ -290,7 +290,7 @@ endpoints:
   # https://developers.tron.network/reference/isshieldedtrc20contractnotespent-1
   is_shielded_trc20_contract_note_spent:
     path: /walletsolidity/isshieldedtrc20contractnotespent
-    method: POST
+    method: post
     variables:
       ak: string!
       nk: string!

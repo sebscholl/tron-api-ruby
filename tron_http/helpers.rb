@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
+# TronHttp
 module TronHttp
+  # Helpers
   module Helpers
     # Checks each variable against the given variables. If type name
     # includes a ! then it is required. If not and a variable is not
@@ -7,31 +11,12 @@ module TronHttp
       return {} unless vars_reference
 
       vars_reference.each do |name, type|
-        name = name.to_sym
-        required = type[-1] == '!'
-        type = type[0..-2] if required
+        next unless type[-1] == '!' && vars_given[name.to_sym].nil?
 
-        return unless required || vars_given[name]
-
-        validate_var_type(name, vars_given[name], type)
+        raise "Missing required variable #{name} of type #{type}."
       end
 
-      # Return the given variables.
       vars_given
-    end
-
-    # Validate type
-    def self.validate_var_type(name, value, type)
-      case type
-      when 'string'
-        raise "Variable #{name} must be a string." unless value.is_a?(String)
-      when 'int32'
-        raise "Variable #{name} must be an integer." unless value.is_a?(Integer)
-      when 'int64'
-        raise "Variable #{name} must be an integer." unless value.is_a?(Integer)
-      when 'boolean'
-        raise "Variable #{name} must be a boolean." unless [TrueClass, FalseClass].include?(value.class)
-      end
     end
   end
 end

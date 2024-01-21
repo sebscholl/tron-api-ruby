@@ -1,49 +1,43 @@
+# frozen_string_literal: true
+
 require 'uri'
-require 'json'
 require 'irb'
+require 'json'
 require 'net/http'
 
+# TronHttp
 module TronHttp
+  # HTTP
   module HTTP
-    # Make a GET request.
-    def self.POST(uri, params = {})
-      http = set_http(uri, 443)
-
-      request = Net::HTTP::Get.new(uri)
-      request = set_headers(request)
-
-      response = http.request(request)
-      JSON.parse response.body
-    end
-
-    # Make a POST request.
-    def self.GET(uri, params = {})
-      http = set_http(uri, 443)
-
-      request = Net::HTTP::Post.new(uri)
-      request = set_headers(request)
-      request.body = JSON.generate(params)
-
-      response = http.request(request)
-      JSON.parse response.body
-    end
-
-    private
-
-    # Set the HTTP request
-    def self.set_http(uri, port)
-      http = Net::HTTP.new(uri.host, uri.port)
+    def self.get(uri, _params = {})
+      http = Net::HTTP.new(uri.host, 443)
       http.use_ssl = true
 
-      http
+      request = Net::HTTP::Get.new(uri)
+
+      default_headers(request)
+
+      response = http.request(request)
+      JSON.parse response.body
     end
 
-    # Set request headers
-    def self.set_headers(request)
-      request["accept"] = 'application/json'
-      request["content-type"] = 'application/json'
+    def self.post(uri, params = {})
+      http = Net::HTTP.new(uri.host, 443)
+      http.use_ssl = true
 
-      request
+      request = Net::HTTP::Post.new(uri)
+      request.body = JSON.generate(params)
+
+      default_headers(request)
+
+      response = http.request(request)
+      JSON.parse response.body
+    end
+
+    # Set request default_headers
+    def self.default_headers(request)
+      request['accept'] = 'application/json'
+      request['content-type'] = 'application/json'
     end
   end
 end
