@@ -1,5 +1,7 @@
 # TronHttp Ruby
 
+![Build](https://github.com/sebscholl/tron_http/actions/workflows/main.yml/badge.svg)
+
 A simple interface to the Tron Network HTTP API.
 
 ## Installation

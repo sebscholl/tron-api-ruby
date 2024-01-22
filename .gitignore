@@ -9,3 +9,6 @@
 
 # Ignore all .gem files
 *.gem
+
+# Gemfile.lock
+/Gemfile.lock
