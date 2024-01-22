@@ -10,15 +10,13 @@ Gem::Specification.new do |spec|
 
   spec.summary = "A simple interface to the Tron Network HTTP API."
   spec.description = "Interact with the Tron Network HTTP API for Mainnet, Shasta, Nile and TronEx."
-  spec.homepage = "https://github.com/sebscholl/tron-http"
+  spec.homepage = "https://github.com/sebscholl/tron_http"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
-  spec.metadata["allowed_push_host"] = "https://github.com/sebscholl/tron-http"
-
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/sebscholl/tron-http"
-  spec.metadata["changelog_uri"] = "https://github.com/sebscholl/tron-http/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/sebscholl/tron_http.git"
+  spec.metadata["changelog_uri"] = "https://github.com/sebscholl/tron_http/blob/master/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
