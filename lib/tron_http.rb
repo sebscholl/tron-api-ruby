@@ -13,5 +13,7 @@ module TronHttp
   DATA = YAML.load_file(
     File.join(__dir__, "data/tron.yml")
   )
+
+  # Scaffold the module
   Config.scaffold
 end
