@@ -11,7 +11,7 @@ module TronHttp
       return {} unless vars_reference
 
       vars_reference.each do |name, type|
-        next unless type[-1] == '!' && vars_given[name.to_sym].nil?
+        next unless type[-1] == "!" && vars_given[name.to_sym].nil?
 
         raise "Missing required variable #{name} of type #{type}."
       end

@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-require 'uri'
-require 'irb'
-require 'json'
-require 'net/http'
+require "json"
+require "net/http"
 
 # TronHttp
 module TronHttp
@@ -36,8 +34,8 @@ module TronHttp
 
     # Set request default_headers
     def self.default_headers(request)
-      request['accept'] = 'application/json'
-      request['content-type'] = 'application/json'
+      request["accept"] = "application/json"
+      request["content-type"] = "application/json"
     end
   end
 end
